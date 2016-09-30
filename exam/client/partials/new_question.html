@@ -1,0 +1,13 @@
+<div ng-controller="newquestionController">
+	<button ng-click='logout()''>Logout</button><br>
+	<a href="{{ '#/' }}">Home</a>
+	
+	<h4>New Question</h4>
+	<form name="questionForm">
+		<p>Question: <input type="text" name="question" ng-model="new_question.question" ng-minlength="10"></p>
+			<p ng-show="questionForm.question.$error.minlength">Question field must be minimum of 10 characters!</p>
+		<p>Description (optional): <input type="text" name="description" ng-model="new_question.description"></p>
+		<button ng-click="goHome()">Cancel</button>
+		<button ng-click="postQuestion()">Submit</button>
+	</form>
+</div>

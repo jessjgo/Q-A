@@ -1,0 +1,17 @@
+<div ng-controller="showoneController">
+	<button ng-click="logout()">Logout</button><br>
+	<a href="{{ '#/' }}">Home</a> |
+	<a href="{{ '#question/'+ question._id + '/new_answer' }}">Answer This Question</a>
+	<div>
+		<h4>{{ question.question }}</h4>
+		<p>{{ question.description }}</p>
+	</div>
+	<ul ng-repeat="answer in question._answers">
+		<li>
+		{{ answer._userId.name }}<br>
+		{{ answer.answer }}<br>
+		{{ answer.description }}<br>
+		{{ answer.like_count }} Likes <button ng-click="likeIncrement(answer._id)">Like!</button>
+		</li>
+	</ul>
+</div>

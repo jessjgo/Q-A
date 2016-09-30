@@ -1,0 +1,33 @@
+<!-- <p>this route is working!</p> -->
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="utf-">
+	<title>Exam</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+	<script src="angular/angular.js" charset="utf-8"></script>
+	<script src="angular-route/angular-route.js" charset="utf-8"></script>
+	<script src="angular-cookies/angular-cookies.js" charset="utf-8"></script>
+	<script src="angular-messages/angular-messages.js" charset="utf-8"></script>
+	<script src="assets/app.js" charset="utf-8"></script> <!-- Need to add in assets since app.js and index.html no longer belong on same level -->
+	<!-- Factories -->
+	<script src="factories/usersFactory.js" charset="utf-8"></script>
+	<script src="factories/questionsFactory.js" charset="utf-8"></script>
+	<script src="factories/answersFactory.js" charset="utf-8"></script>
+
+	<!-- Controllers -->
+	<script src="controllers/loginController.js" charset="utf-8"></script>
+	<script src="controllers/dashboardController.js" charset="utf-8"></script>
+	<script src="controllers/newquestionController.js" charset="utf-8"></script>
+	<script src="controllers/showoneController.js" charset="utf-8"></script>
+	<script src="controllers/newanswerController.js" charset="utf-8"></script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<div ng-view="">
+			
+		</div>
+	</div>
+</body>
+</html>
